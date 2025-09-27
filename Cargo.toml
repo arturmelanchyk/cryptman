@@ -1,0 +1,28 @@
+[package]
+name = "crypt"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "crypt"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+argon2 = "0.5"
+aes-gcm = "0.10"
+chacha20poly1305 = "0.10"
+zeroize = { version = "1.8", features = ["zeroize_derive"] }
+getrandom = "0.3.3"
+rayon = "1.10"
+crossbeam-channel = "0.5"
+num_cpus = "1.16"
+rpassword = "7.3"
+thiserror = "2.0.16"
+indicatif = { version = "0.17", features = ["rayon"] }
+
+[target.'cfg(unix)'.dependencies]
+libc = "0.2"
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["memoryapi"] }
