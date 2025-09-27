@@ -22,7 +22,7 @@ indicatif = { version = "0.17", features = ["rayon"] }
 
 [dev-dependencies]
 assert_cmd = "2.0"
-assert_fs = "1.0"
+assert_fs = "1.1"
 
 [target.'cfg(unix)'.dependencies]
 libc = "0.2"
