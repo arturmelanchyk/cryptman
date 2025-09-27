@@ -13,7 +13,7 @@ mod progress;
 use error::CryptError;
 
 #[derive(Parser)]
-#[command(name = "crypt")]
+#[command(name = "cryptman")]
 #[command(about = "A minimalistic CLI encryption/decryption tool")]
 #[command(version)]
 struct Cli {
